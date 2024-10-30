@@ -225,8 +225,93 @@ export default function App() {
           </div>
         </form>
       </div>
+
+      
       <div className="resume">
-        <h2>{educationInformation.school}</h2>
+        <div className="resume-header">
+          <h1>Justin Nelson</h1>
+          <div className="resume-contact-info">
+            <p>NelsonJustinEvan@gmail.com</p>
+            <p>352-242-8944</p>
+          </div>
+        </div>
+
+        <div className="resume-subheader">
+          <h2>Education</h2>
+          <div className="space-between">
+            <span>Bachelor of Science in Psychology</span>
+            <p>December 2020</p>
+          </div>
+          <div className="space-between">
+            <p>University of Florida, Gainesville, FL</p>
+            <p>GPA: 3.98/4.00</p>
+          </div>
+        </div>
+
+        <div className="resume-subheader">
+          <h2>Work Experience</h2>
+          <div className="space-between">
+            <span>Testing Coordinator</span>
+            <p>June 2023-May2024</p>
+          </div>
+          <div className="left-justified">
+            <p>Aurelia M. Cole Academy, Clermont, FL</p>
+          </div>
+          <ul>
+            <li>
+              Ensured clean and orderly testing environments so that over 2,000
+              specific accommodations could be provided for over 400 students
+              with Individualized Education Plans, 504 plans, or English
+              Language Learner plans
+            </li>
+            <li>
+              Managed confidential documentation and sensitive information for
+              over 1,400 students
+            </li>
+            <li>
+              Maintained effective oral and written communication and working
+              relationships with peers, parents, community stakeholders in the
+              successful launch of testing operations at a newly built K-8
+              academy
+            </li>
+            <li>
+              Integrated technology such as Chromebooks, document cameras,
+              smartboard displays, and curriculum softwares into teaching,
+              testing, and learning processes
+            </li>
+          </ul>
+
+          <div className="space-between">
+            <span>English Teacher</span>
+            <p>March 2021-May 2023</p>
+          </div>
+          <div className="left-justified">
+            <p>Windy Hill Middle School, Clermont, FL</p>
+          </div>
+          <ul>
+            <li>
+              Ensured clean and orderly testing environments so that over 2,000
+              specific accommodations could be provided for over 400 students
+              with Individualized Education Plans, 504 plans, or English
+              Language Learner plans
+            </li>
+            <li>
+              Managed confidential documentation and sensitive information for
+              over 1,400 students
+            </li>
+            <li>
+              Maintained effective oral and written communication and working
+              relationships with peers, parents, community stakeholders in the
+              successful launch of testing operations at a newly built K-8
+              academy
+            </li>
+            <li>
+              Integrated technology such as Chromebooks, document cameras,
+              smartboard displays, and curriculum softwares into teaching,
+              testing, and learning processes
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
