@@ -68,7 +68,11 @@ export default function App() {
     startDate: "",
     endDate: "",
     location: "",
-    description: "",
+    bulletOne: "",
+    bulletTwo: "",
+    bulletThree: "",
+    bulletFour: "",
+    bulletFive: "",
   });
   const updateCompany = (e) => {
     setExperienceInformation((previousState) => {
@@ -95,9 +99,29 @@ export default function App() {
       return { ...previousState, location: e };
     });
   };
-  const updateExperienceDescription = (e) => {
+  const updateExperienceBulletOne = (e) => {
     setExperienceInformation((previousState) => {
-      return { ...previousState, description: e };
+      return { ...previousState, bulletOne: e };
+    });
+  };
+  const updateExperienceBulletTwo = (e) => {
+    setExperienceInformation((previousState) => {
+      return { ...previousState, bulletTwo: e };
+    });
+  };
+  const updateExperienceBulletThree = (e) => {
+    setExperienceInformation((previousState) => {
+      return { ...previousState, bulletThree: e };
+    });
+  };
+  const updateExperienceBulletFour = (e) => {
+    setExperienceInformation((previousState) => {
+      return { ...previousState, bulletFour: e };
+    });
+  };
+  const updateExperienceBulletFive = (e) => {
+    setExperienceInformation((previousState) => {
+      return { ...previousState, bulletFive: e };
     });
   };
 
@@ -217,8 +241,32 @@ export default function App() {
             ></input>
             <label htmlFor="description-form">Description</label>
             <input
-              value={experienceInformation.description}
-              onChange={(e) => updateExperienceDescription(e.target.value)}
+              value={experienceInformation.bulletOne}
+              onChange={(e) => updateExperienceBulletOne(e.target.value)}
+              type="text"
+              id="location-form"
+            ></input>
+            <input
+              value={experienceInformation.bulletTwo}
+              onChange={(e) => updateExperienceBulletTwo(e.target.value)}
+              type="text"
+              id="location-form"
+            ></input>
+            <input
+              value={experienceInformation.bulletThree}
+              onChange={(e) => updateExperienceBulletThree(e.target.value)}
+              type="text"
+              id="location-form"
+            ></input>
+            <input
+              value={experienceInformation.bulletFour}
+              onChange={(e) => updateExperienceBulletFour(e.target.value)}
+              type="text"
+              id="location-form"
+            ></input>
+            <input
+              value={experienceInformation.bulletFive}
+              onChange={(e) => updateExperienceBulletFive(e.target.value)}
               type="text"
               id="location-form"
             ></input>
@@ -226,90 +274,51 @@ export default function App() {
         </form>
       </div>
 
-      
       <div className="resume">
         <div className="resume-header">
-          <h1>Justin Nelson</h1>
+          <h1>{contactInformation.name}</h1>
           <div className="resume-contact-info">
-            <p>NelsonJustinEvan@gmail.com</p>
-            <p>352-242-8944</p>
+            <p>{contactInformation.email}</p>
+            <p>{contactInformation.phoneNumber}</p>
+            <p>{contactInformation.address}</p>
           </div>
         </div>
 
         <div className="resume-subheader">
           <h2>Education</h2>
           <div className="space-between">
-            <span>Bachelor of Science in Psychology</span>
-            <p>December 2020</p>
+            <span>{educationInformation.degree}</span>
+            <p>
+              {educationInformation.startDate} -
+              {educationInformation.endDate}
+            </p>
           </div>
           <div className="space-between">
-            <p>University of Florida, Gainesville, FL</p>
-            <p>GPA: 3.98/4.00</p>
+            <p>
+              {educationInformation.school} -
+              {educationInformation.location}
+            </p>
           </div>
         </div>
 
         <div className="resume-subheader">
           <h2>Work Experience</h2>
           <div className="space-between">
-            <span>Testing Coordinator</span>
-            <p>June 2023-May2024</p>
+            <span>{experienceInformation.position}</span>
+            <p>
+              {experienceInformation.startDate}
+              {experienceInformation.endDate}
+            </p>
           </div>
           <div className="left-justified">
-            <p>Aurelia M. Cole Academy, Clermont, FL</p>
+            <p>{experienceInformation.location}</p>
           </div>
           <ul>
-            <li>
-              Ensured clean and orderly testing environments so that over 2,000
-              specific accommodations could be provided for over 400 students
-              with Individualized Education Plans, 504 plans, or English
-              Language Learner plans
-            </li>
-            <li>
-              Managed confidential documentation and sensitive information for
-              over 1,400 students
-            </li>
-            <li>
-              Maintained effective oral and written communication and working
-              relationships with peers, parents, community stakeholders in the
-              successful launch of testing operations at a newly built K-8
-              academy
-            </li>
-            <li>
-              Integrated technology such as Chromebooks, document cameras,
-              smartboard displays, and curriculum softwares into teaching,
-              testing, and learning processes
-            </li>
-          </ul>
-
-          <div className="space-between">
-            <span>English Teacher</span>
-            <p>March 2021-May 2023</p>
-          </div>
-          <div className="left-justified">
-            <p>Windy Hill Middle School, Clermont, FL</p>
-          </div>
-          <ul>
-            <li>
-              Ensured clean and orderly testing environments so that over 2,000
-              specific accommodations could be provided for over 400 students
-              with Individualized Education Plans, 504 plans, or English
-              Language Learner plans
-            </li>
-            <li>
-              Managed confidential documentation and sensitive information for
-              over 1,400 students
-            </li>
-            <li>
-              Maintained effective oral and written communication and working
-              relationships with peers, parents, community stakeholders in the
-              successful launch of testing operations at a newly built K-8
-              academy
-            </li>
-            <li>
-              Integrated technology such as Chromebooks, document cameras,
-              smartboard displays, and curriculum softwares into teaching,
-              testing, and learning processes
-            </li>
+            <li>{experienceInformation.bulletOne}</li>
+            <li>{experienceInformation.bulletTwo}</li>
+            <li>{experienceInformation.bulletThree}</li>
+            <li>{experienceInformation.bulletFour}</li>
+            <li>{experienceInformation.bulletFive}</li>
           </ul>
         </div>
       </div>
